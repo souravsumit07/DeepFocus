@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#54EB6666"
+    android:id="@+id/Overallackground">
+
+    <!-- Welcome TextView -->
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome,[Your Email ID]"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#471515"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="16dp" />
+
+    <!-- Circular Layout with Stage Name and Timer Inside -->
+    <FrameLayout
+        android:id="@+id/timer_circle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_shape">
+
+        <!-- Stage Name inside the Circle (Top of the Circle) -->
+        <TextView
+            android:id="@+id/stagename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STAGE"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="top|center_horizontal"
+            android:textColor="#471515"
+            android:layout_marginTop="20dp" />
+
+        <!-- Timer TextView inside the Circle (Center of the Circle) -->
+        <TextView
+            android:id="@+id/stopwatch_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="#471515"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <!-- Dots below the Timer -->
+        <LinearLayout
+            android:id="@+id/session_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <!-- Empty/filled dots representing session progress -->
+            <ImageView
+                android:id="@+id/dot1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/dot_empty"
+                android:layout_margin="4dp" />
+
+            <ImageView
+                android:id="@+id/dot2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/dot_empty"
+                android:layout_margin="4dp" />
+
+            <ImageView
+                android:id="@+id/dot3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/dot_empty"
+                android:layout_margin="4dp" />
+
+            <ImageView
+                android:id="@+id/dot4"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/dot_empty"
+                android:layout_margin="4dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Start Button -->
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/green"
+        android:padding="16dp"
+        android:text="Start"
+        android:textColor="@color/white" />
+
+    <!-- Stop Button -->
+
+
+</FrameLayout>
